@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: abhishekdocker03/gitops-backend:prod-12
+        image: abhishekdocker03/gitops-backend:prod-13
         ports:
         - containerPort: 5000
 ---
