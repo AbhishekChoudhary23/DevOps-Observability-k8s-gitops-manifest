@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/AbhishekChoudhary23/DevOps-Observability-k8s-gitops-manifest.git'
     targetRevision: main
-    path: apps
+    path: .
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: my-gitops-app
