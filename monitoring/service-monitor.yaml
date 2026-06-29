@@ -1,15 +1,16 @@
 apiVersion: monitoring.coreos.com/v1
-alpha1: ServiceMonitor
+kind: ServiceMonitor
 metadata:
   name: app-service-monitor
   namespace: monitoring
 spec:
   namespaceSelector:
     matchNames:
-    - my-gitops-app
+      - my-gitops-app
   selector:
     matchLabels:
-      app: backend       
+      app: backend
   endpoints:
-  - port: web             
-    interval: 10s
+    - port: web
+      path: /metrics
+      interval: 10s

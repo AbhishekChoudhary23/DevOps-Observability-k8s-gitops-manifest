@@ -29,10 +29,12 @@ kind: Service
 metadata:
   name: backend-service
   namespace: my-gitops-app
+  labels:
+    app: backend
 spec:
   selector:
     app: backend
   ports:
-  - protocol: TCP
-    port: 5000
-    targetPort: 5000
+    - name: web
+      port: 5000
+      targetPort: 5000
