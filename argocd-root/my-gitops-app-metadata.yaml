@@ -8,7 +8,9 @@ spec:
   source:
     repoURL: 'https://github.com/AbhishekChoudhary23/DevOps-Observability-k8s-gitops-manifest.git'
     targetRevision: main
-    path: .
+    path: .                 # Point directly to the root directory
+    directory:
+      recurse: true         # CRITICAL: Tells ArgoCD to look inside all subfolders recursively
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: my-gitops-app
