@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: abhishekdocker03/gitops-frontend:prod-placeholder
+        image: abhishekdocker03/gitops-frontend:prod-5
         ports:
         - containerPort: 80
 ---
