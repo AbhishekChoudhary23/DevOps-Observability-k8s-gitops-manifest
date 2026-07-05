@@ -3,13 +3,19 @@ kind: ServiceMonitor
 metadata:
   name: app-service-monitor
   namespace: monitoring
+  labels:
+    release: kube-prometheus-stack
+    argocd.argoproj.io/instance: my-gitops-app
+
 spec:
   namespaceSelector:
     matchNames:
       - my-gitops-app
+
   selector:
     matchLabels:
       app: backend
+
   endpoints:
     - port: web
       path: /metrics
