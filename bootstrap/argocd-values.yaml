@@ -1,0 +1,7 @@
+# If you want to install ArgoCD via Helm instead of raw manifests
+# helm install argocd argo/argo-cd -n argocd -f this-file
+server:
+  service:
+    type: ClusterIP # cost saving: no separate LB for ArgoCD
+  extraArgs:
+    - --insecure # for port-forward access without TLS```

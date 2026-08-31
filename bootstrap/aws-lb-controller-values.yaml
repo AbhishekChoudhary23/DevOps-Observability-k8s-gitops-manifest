@@ -1,0 +1,5 @@
+# Used by: helm install aws-load-balancer-controller eks/aws-load-balancer-controller -f this-fileclusterName: observability-eks
+serviceAccount:
+  create: false
+  name: aws-load-balancer-controller
+region: ap-south-1

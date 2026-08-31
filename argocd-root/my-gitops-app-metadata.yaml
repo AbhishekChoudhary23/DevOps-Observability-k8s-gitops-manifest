@@ -6,17 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/AbhishekChoudhary23/DevOps-Observability-k8s-gitops-manifest.git'
+    repoURL: https://github.com/AbhishekChoudhary23/DevOps-Observability-k8s-gitops-manifest.git
     targetRevision: main
-    path: .                 # Point directly to the root directory
-    directory:
-      recurse: true         # CRITICAL: Tells ArgoCD to look inside all subfolders recursively
+    path: apps
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: my-gitops-app
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
