@@ -18,7 +18,7 @@ spec:
       containers:
         - name: frontend
           # CodePipeline will update this via sed
-          image: 123456789012.dkr.ecr.ap-south-1.amazonaws.com/observability-frontend:latest
+          image: 988067790077.dkr.ecr.ap-south-1.amazonaws.com/observability-frontend:latest
           ports:
             - containerPort: 80
           resources:
