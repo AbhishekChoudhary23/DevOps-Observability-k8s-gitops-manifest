@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: abhishekdocker03/gitops-frontend:prod-14
+        image: 988067790077.dkr.ecr.ap-south-1.amazonaws.com/observability-frontend:prod-2-2f8faa7
         ports:
         - containerPort: 80
 ---

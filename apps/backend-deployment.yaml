@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: abhishekdocker03/gitops-backend:prod-14
+        image: 988067790077.dkr.ecr.ap-south-1.amazonaws.com/observability-backend:prod-2-2f8faa7
         ports:
         - containerPort: 5000
 ---
